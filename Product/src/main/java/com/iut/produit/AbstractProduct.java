@@ -1,6 +1,6 @@
 package com.iut.produit;
 
-abstract  class AbstractProduct {
+abstract  class abstractProduct {
 
 
     private double prcost;
