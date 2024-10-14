@@ -3,6 +3,7 @@ plugins {
 	id 'eclipse' // optional (to generate Eclipse project files)
 	id 'idea' // optional (to generate IntelliJ IDEA project files)
 	id 'jacoco'
+	identifiant "org.sonarqube" version "5.1.0.4882"
 }
 
 repositories {
@@ -31,6 +32,13 @@ jacocoTestReport {
 		html.outputLocation=layout.buildDirectory.dir('reports/jacoco/test')
 	}
 }
+
+sonar
+  propriétés {
+    propriété "sonar.projectKey" , "timouchee_tp4_sonrlint" 
+    propriété "sonar.organization" , "timouchee" 
+    propriété "sonar.host.url" , "https://sonarcloud.io"
+  }
 
 jacocoTestCoverageVerification {
 	violationRules {
